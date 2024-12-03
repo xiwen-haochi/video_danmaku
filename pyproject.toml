@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "video_danmaku"
+version = "0.1.0"
+description = "A simple video danmaku processing tool that supports overlaying danmaku files onto videos."
+authors = ["'fkl' <18654198191@163.com>"]
+include = ["video_danmaku"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+opencv-python = ">=4.10.0.84"
+typer = ">=0.13.0"
+
+[tool.poetry.scripts]
+video-danmaku = "video_danmaku.command:app"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
