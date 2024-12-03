@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "video_danmaku"
-version = "0.1.0"
+version = "0.1.1"
 description = "A simple video danmaku processing tool that supports overlaying danmaku files onto videos."
 authors = ["'fkl' <18654198191@163.com>"]
 include = ["video_danmaku"]
