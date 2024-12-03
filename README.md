@@ -38,13 +38,24 @@ video-danmaku 输入视频路径 输出视频路径 弹幕文件路径
 - `弹幕文件路径`: 弹幕文件路径（支持 .json、.ass、.ssa 格式）
 
 ### 示例
-
+命令行
 ```bash
 # 使用 JSON 格式弹幕
 video-danmaku input.mp4 output.mp4 danmaku.json
 
 # 使用 ASS 格式弹幕
 video-danmaku input.mp4 output.mp4 danmaku.ass
+```
+代码
+```python
+from video_danmaku.core import VideoProcessor
+
+
+def test_video_processor():
+    processor = VideoProcessor(
+        "tests/assets/1.mp4", "tests/assets/output.mp4", "tests/assets/dm.json"
+    )
+    processor.process()
 ```
 
 ## 弹幕文件格式
